@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.io.File;
+ 
 public class GradeBook {
     private static Student[] students;
 
@@ -45,9 +48,13 @@ public class GradeBook {
                     break;
                 case "3":
                     // Challenge: write code to save the grades to grades.txt
+
+                    try {
+                        PrintWriter writer = new PrintWriter("grades.txt");
+                    } catch(FileNotFoundException e)
+                    
                     System.out.println("Goodbye!");
                     return;
-
             }
         }
     }
